@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-final-project-server",
+  "version": "1.0.0",
+  "description": "Server Side for 67-328 Final Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claralam/fullstack-final-project-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/claralam/fullstack-final-project-server/issues"
+  },
+  "homepage": "https://github.com/claralam/fullstack-final-project-server#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
