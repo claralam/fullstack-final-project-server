@@ -61,17 +61,15 @@ app.put('/api/edit/:id', (req, res) => {
             recipes = recipes.filter((recipe) => { return recipe.recipeName !== editRecipeName });
             recipes.push(currentRecipe);
             fs.writeFileSync('./data/recipes.json', JSON.stringify(recipes));
-            console.log(recipes)
             res.send('Editing recipe: ' + editRecipeName);
         } else {
-            res.send("Recipe does not exist.", res.status);
+            res.send("Recipe does not exist.");
         }
     }
 });
 
 // Deletes a recipe
 app.delete('/api/delete/:id', (req, res) => {
-    console.log("PARAMS: ", req.params)
     let removeRecipeName = req.params.id;
     if (removeRecipeName) {
         recipes = recipes.filter((recipe) => { return recipe.recipeName !== removeRecipeName });
@@ -80,7 +78,6 @@ app.delete('/api/delete/:id', (req, res) => {
     } else{
         res.send("Error: Cannot delete")
     }
-    console.log("ALL RECIPES: ", recipes)
 });
 
 app.listen(port, () => {
